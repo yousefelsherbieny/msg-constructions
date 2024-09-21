@@ -1,0 +1,31 @@
+ul {
+  list-style: none;
+}
+.header-social i {
+  margin-left: 30px;
+}
+.col-auto i {
+  margin-right: 20px;
+}
+/* Adjust logo size */
+.header-logo img {
+  width: 120px; /* Adjust based on desired size */
+  height: auto;
+}
+
+/* Adjust size of social icons */
+.header-social .hovicon i {
+  font-size: 18px; /* Adjust to desired size */
+  color: #333; /* Adjust the color if needed */
+}
+
+/* Adjust flag icon size */
+.menu-link .h-25px {
+  height: 20px; /* Set appropriate height */
+  width: auto; /* Keep the aspect ratio */
+}
+
+/* Adjust the size of search icon */
+.header-search i {
+  font-size: 16px; /* Set appropriate size */
+}

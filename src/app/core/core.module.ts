@@ -1,4 +1,4 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { LOCALE_ID, ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './theme/header/header.component';
 import { FooterComponent } from './theme/footer/footer.component';
@@ -11,8 +11,10 @@ import { ServicseComponent } from './theme/servicse/servicse.component';
 import { CartComponent } from './theme/cart/cart.component';
 import { ProductCardComponent } from './theme/product-card/product-card.component';
 import { CartService } from './theme/cart/cart.service';
-import { WhyUsComponent } from './theme/why-us/why-us.component';
-
+import { ContactUsComponent } from './theme/contact-us/contact-us.component';
+import { ClientComponent } from './theme/client/client.component';
+import { FixedService } from './utils/fixed.service';
+const fixed = new FixedService();
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -22,13 +24,19 @@ import { WhyUsComponent } from './theme/why-us/why-us.component';
     AboutUsComponent,
     ProductsComponent,
     ServicseComponent,
+    ClientComponent,
     CartComponent,
     ProductCardComponent,
-    WhyUsComponent,
+    ContactUsComponent,
+    ContactUsComponent,
+    ClientComponent,
   ],
   imports: [CommonModule, TranslateModule],
   exports: [HeaderComponent, CartComponent, FooterComponent, LayoutComponent, TranslateModule],
-  providers: [CartService],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'ar' },
+    { provide: FixedService, useValue: fixed },
+  ],
 })
 export class CoreModule {
   static forRoot(): ModuleWithProviders<CoreModule> {
