@@ -11,3 +11,18 @@ iframe {
 strong {
   color: brown;
 }
+.content {
+  width: 310px;
+  border: solid antiquewhite;
+  border-radius: 10px;
+  border-width: 3px;
+  padding: 5px;
+  color: antiquewhite;
+  h3 {
+    margin-top: 20px;
+    color: brown;
+  }
+}
+.overlay-wraper {
+  background-color: black;
+}

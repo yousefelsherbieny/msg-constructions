@@ -7,16 +7,11 @@ import { GlobalService } from '../../utils/global.service';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  isDarkMode = false;
   constructor(
     public fixed: FixedService,
     private global: GlobalService
   ) {}
 
-  ngOnInit() {
-    this.isDarkMode = localStorage.getItem('darkMode') === 'true';
-    document.body.classList.toggle('dark-mode', this.isDarkMode);
-  }
   toggleLanguage() {
     // Toggle between English and Arabic based on the current language
     const nextLanguageCode = this.fixed.activeLang.code === 'en' ? 'ar' : 'en';
@@ -25,10 +20,5 @@ export class HeaderComponent {
     if (nextLanguage) {
       this.global.themeSettings(nextLanguage); // Call themeSettings with the next language
     }
-  }
-  toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode;
-    localStorage.setItem('darkMode', this.isDarkMode.toString());
-    document.body.classList.toggle('dark-mode', this.isDarkMode);
   }
 }

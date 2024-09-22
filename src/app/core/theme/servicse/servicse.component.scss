@@ -1,3 +1,46 @@
-strong {
-  color: brown;
+.products {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-lg-4,
+.col-md-6,
+.col-sm-12 {
+  display: flex;
+  justify-content: center;
+}
+
+.our-team-1 {
+  box-shadow: 0 4px 8px brown;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  max-width: 300px;
+  margin-top: 10px;
+  height: 350px;
+  background-color: black;
+  color: antiquewhite;
+  h4 {
+    color: antiquewhite;
+  }
+}
+
+.our-team-1:hover {
+  transform: scale(1.05);
+}
+
+.profile-image img {
+  width: 500px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.figcaption {
+  text-align: center;
+  margin-top: 10px;
 }

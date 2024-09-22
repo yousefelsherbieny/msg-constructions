@@ -2,219 +2,36 @@
   <app-header></app-header>
 </div>
 <div
-  class="section-full mobile-page-padding mission-outer-section p-t80 p-b30 bg-gray bg-no-repeat card bg-right-center"
-  style="background-image: url(), url(assets/images/background/bg-4.png)">
+  class="section-full mobile-page-padding p-t80 p-b30 site-bg-dark bg-repeat square_shape2 bg-moving"
+  style="background-image: url('images/background/bg-6.png'); background-position: -7629px 0px">
   <div class="container">
     <div class="section-head">
       <div class="mt-separator-outer separator-center">
         <div class="mt-separator">
-          <h2 class="text-danger text-uppercase sep-line-one">
-            <span class="font-weight-300 site-text-primary text-danger">Products </span>
-            List
-          </h2>
-        </div>
-      </div>
-    </div>
-    <app-product-card></app-product-card>
-  </div>
-  <div class="hilite-title text-left p-l50 text-dengar text-pop-up-top">
-    <strong>Blocks</strong>
-  </div>
-</div>
-<div
-  class="section-full mobile-page-padding mission-outer-section p-t80 p-b30 bg-gray bg-no-repeat card bg-right-center"
-  style="background-image: url(assets/images/gallery/pic4.jpg), url(assets/images/background/bg-4.png)">
-  <div class="section-content">
-    <div class="container">
-      <!-- TITLE START -->
-      <div class="section-head">
-        <div class="mt-separator-outer separator-center">
-          <div class="mt-separator">
-            <div class="section-head">
-              <div class="mt-separator-outer separator-center">
-                <div class="mt-separator">
-                  <h2 class="text-danger text-uppercase sep-line-one">
-                    <span class="font-weight-300 site-text-primary text-danger">Crusher </span>
-                    Material
-                  </h2>
+          <h2 class="text-uppercase sep-line-one">Products List</h2>
+
+          <div class="products">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let product of product">
+                <div class="our-team-1 hover-animation-1 text-center">
+                  <div class="profile-image scale-in-center">
+                    <img [src]="product.image" class="img-fluid" alt="" />
+                  </div>
+                  <div class="figcaption">
+                    <h4>{{ product.name }}</h4>
+                    <p>{{ product.size }}</p>
+                    <span>{{ product.price }}</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <p class="fs-5 mt-4">
-              Based on the remarkable evolution of our organization, we want to deepen our roots in the field of construction and its basics. The idea of
-              establishing a crusher in the area of Al-Hammad that is rich of the black basalt stone, which is considered absolutely the best in the production
-              of the block and precast concrete and asphalt.
-            </p>
           </div>
-        </div>
-      </div>
-      <!-- TITLE END -->
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="our-team-1 hover-animation-1">
-            <div class="profile-image scale-in-center">
-              <img src="assets/images/S1.jpeg" alt="" />
-            </div>
-            <div class="figcaption">
-              <h4>3/8 AGGREGATE</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="our-team-1 hover-animation-1">
-            <div class="profile-image scale-in-center">
-              <img src="assets/images/S3.jpeg" alt="" />
-            </div>
-            <div class="figcaption">
-              <h4>3/16 AGGREGATE</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="our-team-1 hover-animation-1">
-            <div class="profile-image scale-in-center">
-              <img src="assets/images/S2.jpeg" alt="" />
-            </div>
-            <div class="figcaption">
-              <h4>1/2 AGGREGATE</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="our-team-1 hover-animation-1" style="height: 242px">
-            <div class="profile-image scale-in-center">
-              <img src="assets/images/S4.jpeg" alt="" style="height: 100px; width: 150px" />
-            </div>
-            <div class="figcaption">
-              <h4>3/4 AGGREGATE</h4>
-            </div>
-          </div>
+          <app-servicse></app-servicse>
         </div>
       </div>
     </div>
+    <!-- <app-product-card></app-product-card> -->
   </div>
-  <div class="hilite-title text-left p-l50 text-dengar text-pop-up-top">
-    <strong>Crusher Material</strong>
-  </div>
+
+  <app-footer></app-footer>
 </div>
-
-<div
-  class="section-full mobile-page-padding mission-outer-section p-t80 p-b30 bg-gray bg-no-repeat card bg-right-center"
-  style="background-image: url(), url(assets/images/background/bg-4.png)">
-  <div class="container">
-    <!-- TITLE START -->
-    <div class="section-head">
-      <div class="mt-separator-outer separator-center">
-        <div class="mt-separator">
-          <h2 class="text-danger text-uppercase sep-line-one">
-            <span class="font-weight-300 site-text-primary text-danger">Ready </span>
-            Mixed Concrete
-          </h2>
-        </div>
-      </div>
-    </div>
-    <!-- TITLE END -->
-
-    <!-- IMAGE CAROUSEL START -->
-    <div class="section-content">
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-4 col-md-6">
-          <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
-            <div class="mt-post-media mt-img-overlay7">
-              <a href="javascript:;"><img src="assets/images/C2.jpeg" alt="" style="width: 420px; height: 300px" /></a>
-            </div>
-
-            <div class="post-overlay-position mt-post-info p-a30">
-              <div class="mt-post-title">
-                <h4 class="post-title m-b0">Concrete 15MPA-OPC/SRC</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
-            <div class="mt-post-media mt-img-overlay7">
-              <a href="javascript:;"><img src="assets/images/C3.jpeg" alt="" style="width: 420px; height: 300px" /></a>
-            </div>
-
-            <div class="post-overlay-position mt-post-info p-a30">
-              <div class="mt-post-title">
-                <h4 class="post-title m-b0">Concrete 20MPA-OPC/SRC</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
-            <div class="mt-post-media mt-img-overlay7">
-              <a href="javascript:;"><img src="assets/images/C4.jpeg" alt="" style="width: 420px; height: 300px" /></a>
-            </div>
-
-            <div class="post-overlay-position mt-post-info p-a30">
-              <div class="mt-post-title">
-                <h4 class="post-title m-b0">Concrete 25MPA-OPC/SRC</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
-            <div class="mt-post-media mt-img-overlay7">
-              <a href="javascript:;"><img src="assets/images/C5.jpeg" alt="" style="width: 420px; height: 300px" /></a>
-            </div>
-            <div class="post-overlay-position mt-post-info p-a30">
-              <div class="mt-post-title">
-                <h4 class="post-title m-b0">Concrete 30MPA-OPC/SRC</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
-            <div class="mt-post-media mt-img-overlay7">
-              <a href="javascript:;"><img src="assets/images/C6.jpeg" alt="" style="width: 420px; height: 300px" /></a>
-            </div>
-
-            <div class="post-overlay-position mt-post-info p-a30">
-              <div class="mt-post-title">
-                <h4 class="post-title m-b0">Concrete 35MPA-OPC/SRC</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
-            <div class="mt-post-media mt-img-overlay7">
-              <a href="javascript:;"><img src="assets/images/C7.jpeg" alt="" style="width: 420px; height: 300px" /></a>
-            </div>
-
-            <div class="post-overlay-position mt-post-info p-a30">
-              <div class="mt-post-title">
-                <h4 class="post-title m-b0">Concrete 38MPA-OPC/SRC</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
-            <div class="mt-post-media mt-img-overlay7">
-              <a href="javascript:;"><img src="assets/images/C1.jpeg" alt="" style="width: 420px; height: 300px" /></a>
-            </div>
-
-            <div class="post-overlay-position mt-post-info p-a30">
-              <div class="mt-post-title">
-                <h4 class="post-title m-b0">Concrete 40MPA-OPC/SRC</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hilite-title text-left p-l50 text-dengar text-pop-up-top">
-    <strong>Ready Mixed Concrete</strong>
-  </div>
-</div>
-<app-footer></app-footer>
