@@ -1,1 +1,24 @@
-{}
+{
+  "WELCOME": {
+    "Welcome": "Welcome",
+    "Building": "Building It better in concrete.",
+    "TheUseOfReady": "The use of ready-mix concrete allows for precise calibration of the component quantities and control according to the required specifications. It eliminates the burden on customers of storing raw materials, thus reducing the labor needed for mixing and pouring. Additionally, the high-quality mixing process eliminates the possibility of human error and the waste of raw materials that can occur with manual mixing."
+  },
+  "HEADER": {
+    "Home": "Home",
+    "AboutUs": "About-Us",
+    "Products": "Products",
+    "Clients": "Clients",
+    "ContactUs": "Contact-Us",
+    "Blog": "Blogs",
+    "Cart": "Cart"
+  },
+  "Common": {
+    "Construction": "Construction",
+    "EngineeringDreams": "Engineering your dreams with us.",
+    "Architecture": "Architecture",
+    "LifeArchitecture": "Life is Architecture",
+    "Renovation": "Renovation",
+    "DazzlingDesign": "Dazzling Design"
+  }
+}
