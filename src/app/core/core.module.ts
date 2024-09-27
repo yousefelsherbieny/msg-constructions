@@ -13,6 +13,7 @@ import { CartService } from './theme/cart/cart.service';
 import { ContactUsComponent } from './theme/contact-us/contact-us.component';
 import { FixedService } from './utils/fixed.service';
 import { BlogsComponent } from './theme/blogs/blogs.component';
+import { RouterModule } from '@angular/router';
 const fixed = new FixedService();
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ const fixed = new FixedService();
     ContactUsComponent,
     BlogsComponent,
   ],
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule,RouterModule],
   exports: [HeaderComponent, CartComponent, FooterComponent, LayoutComponent, TranslateModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'ar' },
