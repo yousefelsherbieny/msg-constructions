@@ -19,54 +19,45 @@ export const service = [
     name: '3/4 AGGREGATE',
     image: 'assets/images/S4.jpeg',
   },
+
   {
     id: '5',
-    name: 'Reinforced Concrete-250',
-    image: 'assets/images/projects/square/pic5.jpg',
+    name: 'Precast Concrete',
+    image: 'assets/images/kh3.jpg',
   },
   {
     id: '6',
-    name: 'Reinforced Concrete-300',
-    image: 'assets/images/projects/square/pic4.jpg',
+    name: 'Prestressed Concrete',
+    image: 'assets/images/kh4.jpg',
   },
   {
     id: '7',
-    name: 'Reinforced Concrete-350',
-    image: 'assets/images/projects/square/pic7.jpg',
-  },
-  {
-    id: '8',
-    name: 'Reinforced Concrete-400',
-    image: 'assets/images/projects/square/pic8.jpg',
-  },
-  {
-    id: '9',
-    name: 'Concrete 20MPA-OPC/SRC',
-    image: 'assets/images/C3.jpeg',
-  },
-  {
-    id: '10',
-    name: 'Concrete 25MPA-OPC/SRC',
-    image: 'assets/images/C4.jpeg',
-  },
-  {
-    id: '11',
-    name: 'Concrete 30MPA-OPC/SRC',
+    name: 'Plain Concrete',
     image: 'assets/images/C5.jpeg',
   },
   {
-    id: '12',
-    name: 'Concrete 35MPA-OPC/SRC',
+    id: '8',
+    name: 'Normal Strength Concrete',
     image: 'assets/images/C6.jpeg',
   },
   {
-    id: '13',
-    name: 'Concrete 38MPA-OPC/SRC',
+    id: '9',
+    name: 'Reinforced Concrete',
     image: 'assets/images/C7.jpeg',
   },
   {
-    id: '14',
-    name: 'Concrete 40MPA-OPC/SRC',
+    id: '10',
+    name: 'High-Density Concrete',
     image: 'assets/images/C1.jpeg',
+  },
+  {
+    id: '11',
+    name: 'Stamped Concrete',
+    image: 'assets/images/kh1.jpg',
+  },
+  {
+    id: '12',
+    name: 'Glass Concrete',
+    image: 'assets/images/kh2.jpg',
   },
 ];
