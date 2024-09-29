@@ -12,21 +12,22 @@
 
           <div class="products">
             <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let product of product">
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of product">
                 <div class="our-team-1 hover-animation-1 text-center">
                   <div class="profile-image scale-in-center">
-                    <img [src]="product.image" class="img-fluid" alt="" />
+                    <a [routerLink]="['/cart', item.id]">
+                      <img [src]="item.image" class="img-fluid" alt="{{ item.name }}" />
+                    </a>
                   </div>
                   <div class="figcaption">
-                    <h4>{{ product.name }}</h4>
-                    <p>{{ product.size }}</p>
-                    <span>{{ product.price }}</span>
+                    <h4>{{ item.name }}</h4>
+                    <p>{{ item.size }}</p>
+                    <span>{{ item.price }}</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <app-servicse></app-servicse>
         </div>
       </div>
     </div>

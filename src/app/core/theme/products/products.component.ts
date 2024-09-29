@@ -8,4 +8,5 @@ import { products } from './product.model';
 })
 export class ProductsComponent {
   product: products[] = product;
+  cartItems = [];
 }

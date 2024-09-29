@@ -3,10 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './core/theme/layout/layout.component';
 import { AboutUsComponent } from './core/theme/about-us/about-us.component';
 import { ProductsComponent } from './core/theme/products/products.component';
-import { ServicseComponent } from './core/theme/servicse/servicse.component';
-import { CartComponent } from './core/theme/cart/cart.component';
 import { ContactUsComponent } from './core/theme/contact-us/contact-us.component';
 import { BlogsComponent } from './core/theme/blogs/blogs.component';
+import { CartComponent } from './core/theme/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -29,9 +28,8 @@ const routes: Routes = [
   },
   { path: 'About-us', component: AboutUsComponent },
   { path: 'Products', component: ProductsComponent },
-  { path: 'services', component: ServicseComponent },
-  { path: 'cart', component: CartComponent },
   { path: 'contact-us', component: ContactUsComponent },
+  { path: 'cart/:id', component: CartComponent },
   { path: 'blog', component: BlogsComponent },
 ];
 

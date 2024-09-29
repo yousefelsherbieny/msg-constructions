@@ -4,51 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CartService {
-  private cartItems: any[] = [];
+  private items: { product: any; quantity: number }[] = [];
 
-  constructor() {
-    this.loadCartFromLocalStorage();
+  // Add product to cart with quantity
+  addToCart(product: any, quantity: number) {
+    this.items.push({ product, quantity });
   }
 
-  addToCart(product: any) {
-    const existingProduct = this.cartItems.find(item => item.name === product.name);
-    if (existingProduct) {
-      existingProduct.quantity += 1;
-    } else {
-      product.quantity = 1;
-      this.cartItems.push(product);
-    }
-    this.saveCartToLocalStorage();
+  // Get all items in the cart
+  getItems() {
+    return this.items;
   }
 
-  getCartItems() {
-    return this.cartItems;
-  }
-
-  updateQuantity(product: any, quantity: number) {
-    const existingProduct = this.cartItems.find(item => item.name === product.name);
-    if (existingProduct) {
-      existingProduct.quantity = quantity;
-      this.saveCartToLocalStorage();
-    }
-  }
-
-  removeFromCart(product: any) {
-    const index = this.cartItems.indexOf(product);
-    if (index > -1) {
-      this.cartItems.splice(index, 1);
-      this.saveCartToLocalStorage();
-    }
-  }
-
-  private saveCartToLocalStorage() {
-    localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
-  }
-
-  private loadCartFromLocalStorage() {
-    const storedCartItems = localStorage.getItem('cartItems');
-    if (storedCartItems) {
-      this.cartItems = JSON.parse(storedCartItems);
-    }
+  // Clear the cart
+  clearCart() {
+    this.items = [];
   }
 }

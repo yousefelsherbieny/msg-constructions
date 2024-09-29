@@ -7,13 +7,11 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SliderComponent } from './theme/slider/slider.component';
 import { AboutUsComponent } from './theme/about-us/about-us.component';
 import { ProductsComponent } from './theme/products/products.component';
-import { ServicseComponent } from './theme/servicse/servicse.component';
-import { CartComponent } from './theme/cart/cart.component';
-import { CartService } from './theme/cart/cart.service';
 import { ContactUsComponent } from './theme/contact-us/contact-us.component';
 import { FixedService } from './utils/fixed.service';
 import { BlogsComponent } from './theme/blogs/blogs.component';
 import { RouterModule } from '@angular/router';
+import { CartComponent } from './theme/cart/cart.component';
 const fixed = new FixedService();
 @NgModule({
   declarations: [
@@ -23,14 +21,12 @@ const fixed = new FixedService();
     SliderComponent,
     AboutUsComponent,
     ProductsComponent,
-    ServicseComponent,
-    CartComponent,
-    ContactUsComponent,
     ContactUsComponent,
     BlogsComponent,
+    CartComponent,
   ],
-  imports: [CommonModule, TranslateModule,RouterModule],
-  exports: [HeaderComponent, CartComponent, FooterComponent, LayoutComponent, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
+  exports: [HeaderComponent, FooterComponent, LayoutComponent, TranslateModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'ar' },
     { provide: FixedService, useValue: fixed },
