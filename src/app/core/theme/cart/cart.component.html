@@ -1,50 +1,44 @@
 <app-header></app-header>
-<div class="CartBox" *ngIf="product">
-  <h1 class="text-danger">{{ product.name }}</h1>
-  <div class="headCart">
-    <p class="lead">
-      Size: <label class="text-danger">{{ product.size }}</label>
-    </p>
-    <span class="text-danger card-header" (click)="clearCart()">Remove from Cart</span>
-  </div>
+
+<div class="cart-container" *ngIf="cartProducts.length > 0; else emptyCart">
+  <h1>Your Cart</h1>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th></th>
+        <th>Product</th>
         <th>Price</th>
-        <th style="width: 25%">Quantity</th>
+        <th>Quantity</th>
         <th>Total</th>
-        <th></th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><img [src]="product.image" alt="{{ product.name }}" class="img-fluid" /></td>
-        <td>{{ product.price }} L.E</td>
+      <tr *ngFor="let item of cartProducts; let i = index">
         <td>
-          <div class="quantity">
-            <input class="form-control" type="number" min="1" />
-          </div>
+          <img
+            [src]="item.product.image"
+            alt="{{ item.product.name }}"
+            style="width: 50px; height: auto;"
+          />
+          {{ item.product.name }}
         </td>
-        <td>{{ product.price * product.quantity }} L.E</td>
+        <td>{{ item.product.price }} L.E</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.product.price * item.quantity }} L.E</td>
         <td>
-          <button class="btn btn-danger">Delete</button>
+          <button class="btn btn-remove" (click)="removeProduct(i)">Remove</button>
         </td>
       </tr>
     </tbody>
-    <tfoot>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th>Total: {{ product.price * product.quantity }} L.E</th>
-        <th>
-          <button class="btn btn-success" (click)="addToCart()">Add to Cart</button>
-        </th>
-      </tr>
-    </tfoot>
   </table>
+  <div class="cart-total">
+    <strong>Total: {{ total }} L.E</strong>
+    <button class="btn btn-clear" (click)="clearCart()">Clear Cart</button>
+  </div>
 </div>
-<div class="alert alert-success" role="alert" *ngIf="orderSuccess"><strong>Well done!</strong> Your product has been added to the cart successfully.</div>
+
+<ng-template #emptyCart>
+  <h2>Your cart is empty.</h2>
+</ng-template>
 
 <app-footer></app-footer>

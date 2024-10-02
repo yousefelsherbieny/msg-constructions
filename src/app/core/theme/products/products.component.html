@@ -1,9 +1,8 @@
-<div class="header">
-  <app-header></app-header>
-</div>
+<app-header></app-header>
+
 <div
   class="section-full mobile-page-padding p-t80 p-b30 site-bg-dark bg-repeat square_shape2 bg-moving"
-  style="background-image: url('images/background/bg-6.png'); background-position: -7629px 0px">
+  style="background-image: url('images/background/bg-6.png'); background-position: -7629px 0px;">
   <div class="container">
     <div class="section-head">
       <div class="mt-separator-outer separator-center">
@@ -12,17 +11,17 @@
 
           <div class="products">
             <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of product">
-                <div class="our-team-1 hover-animation-1 text-center">
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of products">
+                <div class="our-team-1 hover-animation-1 text-center" (click)="addToCart(item)" style="cursor: pointer;">
                   <div class="profile-image scale-in-center">
-                    <a [routerLink]="['/cart', item.id]">
+                    <a >
                       <img [src]="item.image" class="img-fluid" alt="{{ item.name }}" />
                     </a>
                   </div>
                   <div class="figcaption">
                     <h4>{{ item.name }}</h4>
                     <p>{{ item.size }}</p>
-                    <span>{{ item.price }}</span>
+                    <span>{{ item.price }} L.E</span>
                   </div>
                 </div>
               </div>
@@ -31,7 +30,6 @@
         </div>
       </div>
     </div>
-    <!-- <app-product-card></app-product-card> -->
   </div>
 
   <app-footer></app-footer>

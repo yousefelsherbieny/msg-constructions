@@ -1,73 +1,45 @@
-import { Component, input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { product } from '../products/products';
+import { Component, OnInit } from '@angular/core';
+import { CartItem } from '../products/product.model';
+import { CartService } from '../cart/cart.service';
+
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.scss',
+    selector: 'app-cart',
+    templateUrl: './cart.component.html',
+    styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
-  product: any;
-  quantity!: number[];
-  cartProducts: any[] = [];
-  total: number = 0;
-  orderSuccess: any;
+    cartProducts: CartItem[] = []; // Cart items array
+    total: number = 0; // Total cost
 
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit(): void {
-    // Get the product ID from the route
-    const productId = this.route.snapshot.paramMap.get('id');
-
-    // Find the product using the product ID
-    this.product = product.find(item => item.id === productId);
-
-    // Load existing cart products from local storage
-    this.loadCartProducts();
-  }
-
-  loadCartProducts(): void {
-    if ('Cart' in localStorage) {
-      this.cartProducts = JSON.parse(localStorage.getItem('Cart')!);
+    ngOnInit(): void {
+        this.loadCartProducts(); // Load existing cart products
     }
-    this.calculateTotal();
-  }
+    constructor(private cartService: CartService) {}
 
-  addToCart() {
-    // Check if the product is already in the cart
-    const existingProduct = this.cartProducts.find(item => item.product.id === this.product.id);
-
-    if (existingProduct) {
-      // If product exists, update the quantity
-      existingProduct.quantity += this.quantity;
-    } else {
-      // If not, add the new product to the cart
-      this.cartProducts.push({ product: this.product, quantity: this.quantity });
+    loadCartProducts(): void {
+        this.cartProducts = this.cartService.getItems(); // Load cart items
+        this.calculateTotal(); // Calculate total cost
     }
 
-    // Save updated cart back to localStorage
-    localStorage.setItem('Cart', JSON.stringify(this.cartProducts));
-    this.calculateTotal();
+    calculateTotal(): void {
+        this.total = this.cartProducts.reduce(
+            (sum, item) => sum + item.product.price * item.quantity,
+            0
+        ); // Calculate total
+    }
 
-    console.log(`Added ${this.quantity} of ${this.product.name} to the cart`);
-  }
-
-  calculateTotal(): void {
-    this.total = 0;
-    this.cartProducts.forEach(item => {
-      this.total += item.product.price * item.quantity;
-    });
-  }
-
-  removeProduct(index: number): void {
-    this.cartProducts.splice(index, 1);
-    localStorage.setItem('Cart', JSON.stringify(this.cartProducts));
-    this.calculateTotal();
-  }
-
-  clearCart(): void {
-    this.cartProducts = [];
-    localStorage.removeItem('Cart');
-    this.calculateTotal();
-  }
+    removeProduct(index: number): void {
+        this.cartProducts.splice(index, 1); // Remove product from cart
+        localStorage.setItem('Cart', JSON.stringify(this.cartProducts)); // Save updated cart to local storage
+        this.calculateTotal(); // Update total
+    }
+    
+    clearCart(): void {
+      // Loop through the cartProducts and remove each item
+      while (this.cartProducts.length > 0) {
+        this.cartProducts.splice(0, 1); // Remove the first product from the cart
+      }
+      localStorage.setItem('Cart', JSON.stringify(this.cartProducts)); // Update local storage
+      this.total = 0; // Reset total
+    }
 }
