@@ -94,8 +94,8 @@
           <div class="mt-separator-outer separator-center">
             <div class="mt-separator">
               <h2 class="text-danger text-uppercase sep-line-one">
-                <span class="font-weight-300 site-text-primary text-danger">Our </span>
-                Products
+                <span class="font-weight-300 site-text-primary text-danger"></span>
+                {{ 'PROCEDURES.Products' | translate }}
               </h2>
             </div>
           </div>
@@ -108,40 +108,28 @@
             <div class="col-lg-4 col-md-6" style="cursor: pointer">
               <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
                 <div class="mt-post-media mt-img-overlay7">
-                  <img src="assets/images/C2.jpeg" alt="" style="width: 420px; height: 300px" />
+                  <a [routerLink]="['/Products']">
+                    <img src="assets/images/C5.jpeg" alt="" style="width: 420px; height: 300px" />
+                  </a>
                 </div>
 
                 <div class="post-overlay-position mt-post-info p-a30">
                   <div class="mt-post-title">
-                    <h4 class="post-title m-b0">Concrete 15MPA-OPC/SRC</h4>
+                    <h4 class="post-title m-b0">{{ 'PROCEDURES.19.name' | translate }}</h4>
                   </div>
                 </div>
-                <a href="Products"></a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
               <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
                 <div class="mt-post-media mt-img-overlay7">
-                  <a href="Products"><img src="assets/images/C3.jpeg" alt="" style="width: 420px; height: 300px" /></a>
+                  <a [routerLink]="['/Products']"><img src="assets/images/C6.jpeg" alt="" style="width: 420px; height: 300px" /></a>
                 </div>
 
                 <div class="post-overlay-position mt-post-info p-a30">
                   <div class="mt-post-title">
-                    <h4 class="post-title m-b0">Concrete 20MPA-OPC/SRC</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
-                <div class="mt-post-media mt-img-overlay7">
-                  <a href="Products"><img src="assets/images/block5.jpeg" alt="" style="width: 420px; height: 300px" /></a>
-                </div>
-
-                <div class="post-overlay-position mt-post-info p-a30">
-                  <div class="mt-post-title">
-                    <h4 class="post-title m-b0">Solid Cement Block</h4>
+                    <h4 class="post-title m-b0">{{ 'PROCEDURES.20.name' | translate }}</h4>
                   </div>
                 </div>
               </div>
@@ -149,11 +137,12 @@
             <div class="col-lg-4 col-md-6">
               <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
                 <div class="mt-post-media mt-img-overlay7">
-                  <a href="Products"><img src="assets/images/block11.jpeg" alt="" style="width: 420px; height: 300px" /></a>
+                  <a [routerLink]="['/Products']"><img src="assets/images/block5.jpeg" alt="" style="width: 420px; height: 300px" /></a>
                 </div>
+
                 <div class="post-overlay-position mt-post-info p-a30">
                   <div class="mt-post-title">
-                    <h4 class="post-title m-b0">Insulated Block</h4>
+                    <h4 class="post-title m-b0">{{ 'PROCEDURES.10.name' | translate }}</h4>
                   </div>
                 </div>
               </div>
@@ -161,12 +150,11 @@
             <div class="col-lg-4 col-md-6">
               <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
                 <div class="mt-post-media mt-img-overlay7">
-                  <a href="Products"><img src="assets/images/S3.jpeg" alt="" style="width: 420px; height: 300px" /></a>
+                  <a [routerLink]="['/Products']"><img src="assets/images/block11.jpeg" alt="" style="width: 420px; height: 300px" /></a>
                 </div>
-
                 <div class="post-overlay-position mt-post-info p-a30">
                   <div class="mt-post-title">
-                    <h4 class="post-title m-b0">3/16 AGGREGATE</h4>
+                    <h4 class="post-title m-b0">{{ 'PROCEDURES.11.name' | translate }}</h4>
                   </div>
                 </div>
               </div>
@@ -174,12 +162,25 @@
             <div class="col-lg-4 col-md-6">
               <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
                 <div class="mt-post-media mt-img-overlay7">
-                  <a href="Products"><img src="assets/images/S4.jpeg" alt="" style="width: 420px; height: 300px" /></a>
+                  <a href="Products"><img src="assets/images/Ag5.jpeg" alt="" style="width: 420px; height: 300px" /></a>
                 </div>
 
                 <div class="post-overlay-position mt-post-info p-a30">
                   <div class="mt-post-title">
-                    <h4 class="post-title m-b0">3/4 AGGREGATE</h4>
+                    <h4 class="post-title m-b0">{{ 'PROCEDURES.25.name' | translate }}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="mt-box blog-post latest-blog-3 date-style-1 bg-white m-b30">
+                <div class="mt-post-media mt-img-overlay7">
+                  <a href="Products"><img src="assets/images/Ag6.jpeg" alt="" style="width: 420px; height: 300px" /></a>
+                </div>
+
+                <div class="post-overlay-position mt-post-info p-a30">
+                  <div class="mt-post-title">
+                    <h4 class="post-title m-b0">{{ 'PROCEDURES.27.name' | translate }}</h4>
                   </div>
                 </div>
               </div>
@@ -188,7 +189,7 @@
         </div>
       </div>
       <div class="hilite-title text-left p-l50 text-dengar text-pop-up-top">
-        <strong>PRODUCTS</strong>
+        <strong>{{ 'PROCEDURES.Products' | translate }}</strong>
       </div>
     </div>
     <div class="section-full mobile-page-padding our-service-wrap p-b50 square_shape2"></div>
@@ -200,12 +201,12 @@
             <div class="mt-separator-outer separator-left">
               <div class="mt-separator">
                 <h2 class="text-danger text-uppercase sep-line-one">
-                  <span class="font-weight-300 site-text-primary text-danger">Our</span>
-                  Services
+                  <span class="font-weight-300 site-text-primary text-danger">{{ 'Services.Our' | translate }}</span>
+                  {{ 'Services.SERVICES' | translate }}
                 </h2>
               </div>
             </div>
-            <h3>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</h3>
+            <h3>{{ 'Services.OurServices' | translate }}</h3>
           </div>
           <!-- TITLE END -->
         </div>
@@ -221,8 +222,8 @@
                     <span class="icon-cell"><img src="assets/images/icon/crane-1.png" alt="" /></span>
                   </div>
                   <div class="icon-content">
-                    <h4 class="mt-tilte m-b25">Building <br />Construction</h4>
-                    <p>lorem Ipsum available, but the majority have suffered alterati on in some form, by ious by accident.</p>
+                    <h4 class="mt-tilte m-b25">{{ 'Services.Construction' | translate }} <br />{{ 'Services.Building' | translate }}</h4>
+                    <p>{{ 'Services.BuildingConstruction' | translate }}</p>
                     <a href="services.html" class="site-button-link text-danger" data-hover="Read More"
                       >Read More <i class="fa fa-angle-right arrow-animation"></i
                     ></a>
@@ -239,8 +240,8 @@
                     <span class="icon-cell"><img src="assets/images/icon/renovation.png" alt="" /></span>
                   </div>
                   <div class="icon-content">
-                    <h4 class="mt-tilte m-b25">Building <br />Renovation</h4>
-                    <p>lorem Ipsum available, but the majority have suffered alterati on in some form, by ious by accident.</p>
+                    <h4 class="mt-tilte m-b25">{{ 'Services.Renovation' | translate }} <br />{{ 'Services.Building' | translate }}</h4>
+                    <p>{{ 'Services.BuildingRenovation' | translate }}</p>
                     <a href="services.html" class="site-button-link text-danger" data-hover="Read More"
                       >Read More <i class="fa fa-angle-right arrow-animation"></i
                     ></a>
@@ -257,8 +258,8 @@
                     <span class="icon-cell"><img src="assets/images/icon/toolbox.png" alt="" /></span>
                   </div>
                   <div class="icon-content">
-                    <h4 class="mt-tilte m-b25">Building <br />Maintenance</h4>
-                    <p>lorem Ipsum available, but the majority have suffered alterati on in some form, by ious by accident.</p>
+                    <h4 class="mt-tilte m-b25">{{ 'Services.Maintenance' | translate }} <br />{{ 'Services.Building' | translate }}</h4>
+                    <p>{{ 'Services.BuildingMaintenance' | translate }}</p>
                     <a href="services.html" class="site-button-link text-danger" data-hover="Read More"
                       >Read More <i class="fa fa-angle-right arrow-animation"></i
                     ></a>
@@ -275,8 +276,8 @@
                     <span class="icon-cell"><img src="assets/images/icon/compass.png" alt="" /></span>
                   </div>
                   <div class="icon-content">
-                    <h4 class="mt-tilte m-b25">Architecture<br />Design</h4>
-                    <p>lorem Ipsum available, but the majority have suffered alterati on in some form, by ious by accident.</p>
+                    <h4 class="mt-tilte m-b25">{{ 'Services.Design' | translate }}<br />{{ 'Services.Architecture' | translate }}</h4>
+                    <p>{{ 'Services.ArchitectureDesign' | translate }}</p>
                     <a href="services.html" class="site-button-link text-danger" data-hover="Read More"
                       >Read More <i class="fa fa-angle-right arrow-animation"></i
                     ></a>
@@ -289,7 +290,7 @@
       </div>
     </div>
     <div class="hilite-title text-left p-l50 text-dengar text-pop-up-top">
-      <strong>Services</strong>
+      <strong>{{ 'Services.SERVICES' | translate }}</strong>
     </div>
   </div>
   <!-- OUR PROJECT START -->
@@ -303,8 +304,7 @@
         <div class="mt-separator-outer separator-center">
           <div class="mt-separator">
             <h2 class="text-uppercase text-danger sep-line-one">
-              <span class="font-weight-300 text-danger site-text-primary">Client</span>
-              Testimonials
+              <span class="font-weight-300 text-danger site-text-primary">{{ 'CLIENT.OurClient' | translate }}</span>
             </h2>
           </div>
         </div>
@@ -321,8 +321,8 @@
                     <img src="assets/images/blog/blog-grid/pic1.jpg" class="img-fluid img-box" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">Real State</h4>
-                    <p class="mb-0">Construction of the Charitable a housing project</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.Housing' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -333,8 +333,8 @@
                     <img src="assets/images/blog/blog-grid/pic2.jpg" class="img-fluid img-box w-500px h-500px" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">SAPAC</h4>
-                    <p class="mb-0">Sidewalks projects,Tunnels of Turaif and Qurayyat</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.Sidewalk' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -345,8 +345,8 @@
                     <img src="assets/images/blog/blog-grid/pic3.jpg" class="img-fluid img-box w-500px h-500px" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">Arabian Civil Works Company</h4>
-                    <p class="mb-0">Building Public Schools</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.Establishment' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -361,8 +361,8 @@
                     <img src="assets/images/blog/blog-grid/pic4.jpg" class="img-fluid img-box w-500px h-500px" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">Hamed Almdouh Group</h4>
-                    <p class="mb-0">Almdouh Hotel,Municipal Projects</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.Hotels' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -373,8 +373,8 @@
                     <img src="assets/images/blog/blog-grid/pic5.jpg" class="img-fluid img-box w-500px h-500px" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">BABEL</h4>
-                    <p class="mb-0">Building the University of Northern Borders</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.University' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -385,8 +385,8 @@
                     <img src="assets/images/blog/blog-grid/pic6.jpg" class="img-fluid img-box w-500px h-500px" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">BINAA ALAJYAL CONSTAUCTION EST</h4>
-                    <p class="mb-0">Building Public Schools</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.Private' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -401,8 +401,8 @@
                     <img src="assets/images/blog/default/thum1.jpg" class="img-fluid img-box w-500px h-500px" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">Al-RASHID TRADING & CONTRACTING</h4>
-                    <p class="mb-0">Building Housing of the Border Patrol/Guards</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.Border' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -413,8 +413,8 @@
                     <img src="assets/images/blog/blog-grid/pic8.jpg" class="img-fluid img-box w-500px h-500px" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">Al-Rajhi Development Co.Ltd</h4>
-                    <p class="mb-0">Public School, Technical Institute</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.Government' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -425,8 +425,8 @@
                     <img src="assets/images/blog/default/thum3.jpg" class="img-fluid img-box w-500px h-500px" alt="" />
                   </div>
                   <div class="mt-info pt-2 text-white">
-                    <h4 class="mt-tilte mb-2 mt-0">Al-Aqili Trading and Contracting EST</h4>
-                    <p class="mb-0">Hotels,Celebrations Galleries</p>
+                    <h4 class="mt-tilte mb-2 mt-0">{{ 'CLIENT.RealState' | translate }}</h4>
+                    <p class="mb-0">{{ 'CLIENT.Celebration' | translate }}</p>
                   </div>
                   <a href="project-detail.html"></a>
                 </div>
@@ -445,7 +445,7 @@
       </div>
     </div>
     <div class="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
-      <strong>Clients</strong>
+      <strong>{{ 'CLIENT.Client' | translate }}</strong>
     </div>
   </div>
 

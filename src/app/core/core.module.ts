@@ -9,23 +9,12 @@ import { AboutUsComponent } from './theme/about-us/about-us.component';
 import { ProductsComponent } from './theme/products/products.component';
 import { ContactUsComponent } from './theme/contact-us/contact-us.component';
 import { FixedService } from './utils/fixed.service';
-import { BlogsComponent } from './theme/blogs/blogs.component';
 import { RouterModule } from '@angular/router';
 import { CartComponent } from './theme/cart/cart.component';
 import { FormsModule } from '@angular/forms';
 const fixed = new FixedService();
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
-    LayoutComponent,
-    SliderComponent,
-    AboutUsComponent,
-    ProductsComponent,
-    ContactUsComponent,
-    BlogsComponent,
-    CartComponent,
-  ],
+  declarations: [HeaderComponent, FooterComponent, LayoutComponent, SliderComponent, AboutUsComponent, ProductsComponent, ContactUsComponent, CartComponent],
   imports: [CommonModule, FormsModule, TranslateModule, RouterModule],
   exports: [HeaderComponent, FooterComponent, LayoutComponent, TranslateModule],
   providers: [
