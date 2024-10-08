@@ -20,5 +20,119 @@
     "LifeArchitecture": "Life is Architecture",
     "Renovation": "Renovation",
     "DazzlingDesign": "Dazzling Design"
+  },
+  "PROCEDURES": {
+    "ProductsList": "Products List",
+    "Products": "Products",
+    "1": {
+      "name": "Hollow Cement Block"
+    },
+    "2": {
+      "name": "Hollow Cement Block"
+    },
+    "3": {
+      "name": "Hollow Cement Block"
+    },
+    "4": {
+      "name": "Fluted Cement Block"
+    },
+    "5": {
+      "name": "Fluted Cement Block"
+    },
+    "6": {
+      "name": "Solid Cement Block"
+    },
+    "7": {
+      "name": "Solid Cement Block"
+    },
+    "8": {
+      "name": "Solid Cement Block"
+    },
+    "9": {
+      "name": "Hourdy Cement Block"
+    },
+    "10": {
+      "name": "Hourdy Cement Block"
+    },
+    "11": {
+      "name": "Insulated Block"
+    },
+    "12": {
+      "name": "Insulated Block"
+    },
+    "13": {
+      "name": "High-Density Aggregate"
+    },
+    "14": {
+      "name": "Lightweight Aggregate"
+    },
+    "15": {
+      "name": "Recycled Aggregate"
+    },
+    "16": {
+      "name": "Coarse Aggregate"
+    },
+    "17": {
+      "name": "Precast Concrete"
+    },
+    "18": {
+      "name": "Prestressed Concrete"
+    },
+    "19": {
+      "name": "Plain Concrete"
+    },
+    "20": {
+      "name": "Normal Strength Concrete"
+    },
+    "21": {
+      "name": "Reinforced Concrete"
+    },
+    "22": {
+      "name": "High-Density Concrete"
+    },
+    "23": {
+      "name": "Stamped Concrete"
+    },
+    "24": {
+      "name": "Glass Concrete"
+    },
+    "25": {
+      "name": "Fine Aggregate"
+    },
+    "26": {
+      "name": "3/4 Inch Aggregate"
+    },
+    "27": {
+      "name": "1/2 Inch Aggregate"
+    }
+  },
+  "Services": {
+    "OurServices": "The services offered by our company.",
+    "Our": "Our",
+    "SERVICES": "Services",
+    "Building": "Building",
+    "Construction": "Construction",
+    "BuildingConstruction": "This refers to the process of constructing buildings, from laying the foundation to putting up walls, roofs, and everything else.",
+    "Renovation": "Renovation",
+    "BuildingRenovation": "his refers to the process of improving, updating, or restoring an existing building. Renovation can involve everything from small repairs and cosmetic updates, like painting or replacing fixtures, to major structural changes",
+    "Maintenance": "Maintenance",
+    "BuildingMaintenance": "This involves keeping buildings in good condition by performing regular inspections, repairs, and necessary updates.",
+    "Architecture": "Architecture",
+    "Design": "Design",
+    "ArchitectureDesign": "This is the creative process of designing buildings and spaces. Architects create blueprints and plans for structures"
+  },
+  "CLIENT": {
+    "OurClient": "Our Clients",
+    "Client": "Clients",
+    "RealState": "Real State",
+    "Housing": "Establishment of a charitable housing project",
+    "Sidewalk": "Sidewalk projects, Tarif and Qurayyat tunnels",
+    "Establishment": "Establishment of government schools",
+    "Hotels": " Hotels, municipal projects",
+    "University": "Establishment of the Northern Border University",
+    "Private": "Establishment of private schools",
+    "Border": "Establishment of border guard housing",
+    "Government": "Government school, technical institute",
+    "Celebration": "Hotels, celebration exhibitions"
   }
 }
